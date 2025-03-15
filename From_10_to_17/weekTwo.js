@@ -1,92 +1,57 @@
 console.log("Assignment One:-");
 console.log("=".repeat(20));
 //--------------- 1 -------------------------
-// <!DOCTYPE html>
-// <html lang="en">
-//   <head>
-//     <meta charset="UTF-8" />
-//     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-//     <title>Learn JavaScript</title>
-//     <script>
-//       // Code One
-//         can't work because js code loaded before html page loaded and style element = null
-//       document.getElementById("el").style.color = "red";
-//     </script>
-//     <script>
-//       // Code Two will work
-//       window.onload = function () {
-//         document.getElementById("el").style.color = "red";
-//       };
-//     </script>
-//   </head>
-//   <body>
-//     <h1 id="el">Page Title</h1>
 
-//     <script>
-//       // Code Three will work
-//       document.getElementById("el").style.color = "red";
-//     </script>
+let numberOne = 10;
+let NumberTwo = 20;
+''
+let firstNormalConcat = numberOne +""+ NumberTwo;
+let secondNormalConcat = `${numberOne}${NumberTwo}`;
 
-//   </body>
-// </html>
+console.log(firstNormalConcat); // Normal Concatenate => 1020
+console.log(typeof firstNormalConcat); // Normal Concatenate => String
+console.log(`${secondNormalConcat}`); // Template Literals Way => 1020
+console.log(typeof secondNormalConcat); // Template Literals Way => String
+
+console.log(NumberTwo + "\n" + numberOne);
+console.log(`${NumberTwo}
+${numberOne}`);
+
 
 //--------------- 2 -------------------------
 console.log("=".repeat(20));
 console.log("Assignment Two:-");
 console.log("=".repeat(20));
 
-document.getElementById("el").classList.add("styleH1");
+//Added in html element with id = elzero and innerHTML = object
+console.log(elzero.innerHTML); // object
+console.log(typeof elzero); // object
 
-// document.getElementById("el").style.color = "blue";
-
-// document.getElementById("el").style.fontSize = "80px";
-
-// document.getElementById("el").style.fontWeight = "bold";
-
-// document.getElementById("el").style.textAlign = "center";
-
-// document.getElementById("el").style.fontFamily = "Arial";
 
 //--------------- 3 -------------------------
 console.log("Assignment Three:-");
 console.log("=".repeat(20));
-
-console.log("%cElzero %cWeb %cSchool", "color:red;font-size:40px", "color:green;font-size:40px;font-weight:bold", "background-color:blue;font-size:40px");
+console.log(`I\'m In
+\\\\
+Love \\\\ """ '''
+++ With ++
+\\"""\\"""
+""JavaScript""\`\``);
 
 //--------------- 4 -------------------------
 console.log("=".repeat(20));
 console.log("Assignment Four:-");
 console.log("=".repeat(20));
 
-console.group("Group 1");
-console.log("Message One");
-console.log("Message Two");
-console.group("Child Group");
-console.log("Message One");
-console.log("Message Two");
-console.group("Grand Child Group");
-console.log("Message One");
-console.log("Message Two");
+let a = 21;
+let b = 20;
+let c = b + "21" +"_";
+let d = +"21" - "1";
 
-console.groupEnd();
-console.groupEnd();
-console.groupEnd();
-
-console.group("Group 2");
-console.log("Message One");
-console.log("Message Two");
-console.groupEnd();
+console.log(`_${a}_${c.repeat(2)}${d}_`);
+// _21_2021_2021_2021_20_
 
 //--------------- 5 -------------------------
 console.log("=".repeat(20));
 console.log("Assignment Five:-");
 console.log("=".repeat(20));
-console.table(["Elzreo", "ahmed", "Sameh"]);
-
-//--------------- 6 -------------------------
-console.log("=".repeat(20));
-console.log("Assignment Six:-");
-console.log("=".repeat(20));
-
-// console.log("Iam In Console");
-// document.write("Iam In Page");
