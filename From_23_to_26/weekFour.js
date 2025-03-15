@@ -2,6 +2,19 @@ console.log("Assignment One:-");
 console.log("=".repeat(20));
 //--------------- 1 -------------------------
 
+// Examples
+console.log(100_000); // 100000
+console.log(100000); // 100000
+console.log(5e4 + 5e4); // 100000
+
+// Your Solutions
+console.log(100 * 100 *10); // 100000
+console.log(Math.pow(10, 5)); // 100000
+console.log(1e5); // 100000
+console.log(10 ** 5); // 100000
+console.log(5000000 / 50); // 100000
+console.log(100000.000); // 100000
+console.log((100000 / 2) << true); // 100000
 
 
 //--------------- 2 -------------------------
@@ -9,61 +22,62 @@ console.log("=".repeat(20));
 console.log("Assignment Two:-");
 console.log("=".repeat(20));
 
-let num = 3;
+console.log(-Number.MIN_SAFE_INTEGER); // 9007199254740991
 
-// Solution One
-console.log(num + true + true + true); // 6
-
-// Solution Two
-console.log(num + Number(true) + Number(true) + Number(true)); // 6
-
-// Soultion Three
-console.log(num * (true + true)); // 6
-
-// Soultion Four
-console.log(num + !!true + !!true + !!true); // 6
-
-// Solution Five
-console.log(num + -(-true) + -(-true) + -(-true)); // 6
-
-// Solution Six
-console.log(num << true); // 6
-
-// Solution Seven
-console.log(num + ["a", "b", "c"].length); // 6
 
 //--------------- 3 -------------------------
+console.log("=".repeat(20));
 console.log("Assignment Three:-");
 console.log("=".repeat(20));
 
-num = "10";
+console.log(Math.ceil((Number.MAX_SAFE_INTEGER / 6000_000_000_000_00)));
 
-// Solution One
-console.log(+num + +num); // 20
-
-// Solution Two
-console.log(parseInt(num) + parseInt(num)); // 20
-
-// Solution Three
-console.log(Number(num) + Number(num)); // 20
-
-// Solution Four
-console.log(-(-num) + -(-num)); // 20
 //--------------- 4 -------------------------
 console.log("=".repeat(20));
 console.log("Assignment Four:-");
 console.log("=".repeat(20));
 
-let points = 10;
+let myVar = "100.56789 Views";
+myVar = parseFloat(myVar);
 
-// Write Your Code Here
+console.log(Math.floor(myVar)); // 100
+console.log(myVar.toFixed(2)); // 100.57
 
-console.log(points + true + !!true + Number(true)); // 13
+//--------------- 5 -------------------------
+console.log("=".repeat(20));
+console.log("Assignment Five:-");
+console.log("=".repeat(20));
 
-// Write Your Code Here
+let num = 10;
+let inte = Number.isInteger(num) + Number.isInteger(num);
+console.log(inte); // 2
 
-console.log(points - true - Number(true)); // 8;
+//--------------- 6 -------------------------
+console.log("=".repeat(20));
+console.log("Assignment Six:-");
+console.log("=".repeat(20));
 
+let flt = 10.4;
+
+console.log(Math.floor(flt)); // 10
+console.log(Math.trunc(flt)); // 10
+console.log(parseInt(flt)); // 10
+console.log(Math.round(flt)); // 10
+console.log(+flt.toFixed(0)); // 10
+
+//--------------- 7 -------------------------
+console.log("=".repeat(20));
+console.log("Assignment Seven:-");
+console.log("=".repeat(20));
+
+console.log(Math.floor(Math.random() * 5)); // 0 || 1 || 2 || 3 || 4
+
+// 💡 كيف يعمل هذا الكود؟
+// Math.random() → يعطي رقم عشوائي بين 0 و أقل من 1.
+// Math.random() * 5 → يعطي رقم عشوائي بين 0 و أقل من 5 (مثل 3.8، 0.2، 4.7 … إلخ).
+// Math.floor() → يقرب الرقم للأسفل لأقرب عدد صحيح (0, 1, 2, 3, 4).
+
+    
 //---------------  Number Challenge -------------------------
 console.log("=".repeat(20));
 console.log(" Number Challenge");
