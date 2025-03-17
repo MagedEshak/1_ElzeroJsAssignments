@@ -1,120 +1,53 @@
-console.log("Assignment One:-");
+console.log("Assignment:-");
 console.log("=".repeat(20));
 //--------------- 1 -------------------------
 
-let myFriends = ["Ahmed", "Elham", "Osama", "Gamal"];
-let num = 3;
+let req = new XMLHttpRequest();
+req.open("GET", "http://127.0.0.1:5500/From_169_to_178/articles.json");
+req.send();
+console.log(req);
 
-// Method 1
-console.log(myFriends.slice(false,num)); // ["Ahmed", "Elham", "Osama"];
+req.onreadystatechange = function () {
+  if (this.readyState === 4 && this.status === 200) {
+    console.log(this.responseText);
+    let mainData = JSON.parse(this.responseText);
 
-myFriends.pop();
-// Method 2
-console.log(myFriends); // ["Ahmed", "Elham", "Osama"];
+    console.log(mainData);
 
-//--------------- 2 -------------------------
-console.log("=".repeat(20));
-console.log("Assignment Two:-");
-console.log("=".repeat(20));
+    for (let i = 0; i < mainData.length; i++) {
+          mainData[i].Section = "All";
 
-let friends = ["Ahmed", "Eman", "Osama", "Gamal"];
+          let div = document.createElement("div");
+          div.setAttribute("id", "data");
+        
+          let div1 = document.createElement("div");
+          div.appendChild(div1);
 
-friends.pop();
-friends.shift();
+          let h2 = document.createElement("h2");
+          h2.textContent = `Title: ${mainData[i].Title}`;
+          div.appendChild(h2);
 
-console.log(friends); // ["Eman", "Osama"]
+          let p1 = document.createElement("p");
+          p1.textContent = mainData[i].Content;
+          div.appendChild(p1);
 
-//--------------- 3 -------------------------
-console.log("=".repeat(20));
-console.log("Assignment Three:-");
-console.log("=".repeat(20));
+          let p2 = document.createElement("p");
+          p2.textContent = `Author Name: ${mainData[i].AuthorName}`;
+          div.appendChild(p2);
 
-let arrOne = ["C", "D", "X"];
-let arrTwo = ["A", "B", "Z"];
-let finalArr = [];
+          let p3 = document.createElement("p");
+          p3.textContent = `Section: ${mainData[i].Section}`;
+          div.appendChild(p3);
 
-finalArr = finalArr.concat(arrOne,arrTwo).sort().reverse();
+          document.body.appendChild(div);
+    }
 
-console.log(finalArr); // ["Z", "X", "D", "C", "B", "A"]
+    let updatedData = JSON.stringify(mainData);
+    console.log(updatedData);
 
-//--------------- 4 -------------------------
-console.log("=".repeat(20));
-console.log("Assignment Four:-");
-console.log("=".repeat(20));
-
-let website = "Go";
-let words = [`${website}ogle`, "Facebook", ["Elzero", "Web", "School"]];
-
-console.log(words.slice(true + true)[0][0].split(" ").join().substring(true + true).toUpperCase()); // ZERO
-
-//console.log(words[0] = "Zero".toUpperCase()); // ZERO
-
-//--------------- 5 -------------------------
-console.log("=".repeat(20));
-console.log("Assignment Five:-");
-console.log("=".repeat(20));
-
-let needle = "JS";
-let haystack = ["PHP", "JS", "Python"];
-
-// Write 3 Solutions
-if (haystack.includes(needle)) {
-  console.log("Found ");
+  }
 }
 
-if (haystack.indexOf(needle) === 1) {
-    console.log("Found");
-}
 
-if (haystack.lastIndexOf(needle) === 1) {
-    console.log("Found");
-} 
-    
-//--------------- 6 -------------------------
-console.log("=".repeat(20));
-console.log("Assignment Six:-");
-console.log("=".repeat(20));
 
-let arr1 = ["A", "C", "X"];
-let arr2 = ["D", "E", "F", "Y"];
-let allArrs = [];
-
-arr1.shift();
-arr2.shift();
-
-allArrs = allArrs.concat(arr1, arr2).sort();
-allArrs.shift();
-
-console.log(allArrs.slice(true).join("").toLowerCase()); // fxy
-
-// allArrs.push(arr2[arr2.length - (true + true)]); // "F"
-// allArrs.push(arr1[arr1.length - true]);          // "X"
-// allArrs.push(arr2[arr2.length - true]);          // "Y"
-
-// console.log(allArrs.join("").toLowerCase()); // fxy
-
-//--------------- Array Challenge -------------------------
-console.log("=".repeat(20));
-console.log("Array Challenge");
-console.log("=".repeat(20));
-
-/*
-  Array Challenge
-*/
-
-let zero = 0;
-
-let counter = 3;
-
-let my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
-
-// Write Code Here
-my = my.slice(zero, ++counter).reverse();
-console.log(my); // ["Osama", "Elham", "Mazero", "Ahmed"];
-
-console.log(my.slice(++zero, --counter)); // ["Elham", "Mazero"]
-
-console.log(); // "Elzero"
-
-console.log(); // "rO"
 
