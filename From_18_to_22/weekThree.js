@@ -48,7 +48,8 @@ console.log(parseInt(num) + parseInt(num)); // 20
 console.log(Number(num) + Number(num)); // 20
 
 // Solution Four
-console.log(-(-num) + -(-num)); // 20
+console.log(-(-num) + -(-num)); // 20.
+
 //--------------- 4 -------------------------
 console.log("=".repeat(20));
 console.log("Assignment Four:-");
